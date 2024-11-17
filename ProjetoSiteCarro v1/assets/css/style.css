@@ -1,0 +1,892 @@
+.button1 {
+    min-width: 120px;
+  
+    position: relative;
+    cursor: pointer;
+  
+    padding: 12px 17px;
+    border: 0;
+    border-radius: 7px;
+  
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+      ellipse at bottom,
+      rgba(71, 81, 92, 1) 0%,
+      rgba(11, 21, 30, 1) 45%
+    );
+  
+    color: rgb(255, 255, 255, 0.66);
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button1::before {
+    content: "";
+    width: 70%;
+    height: 1px;
+  
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+  
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.2;
+  
+    transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
+  }
+  
+  .button1:hover {
+    color: rgb(255, 255, 255, 1);
+    transform: scale(1.1) translateY(-3px);
+  }
+  
+  .button1:hover::before {
+    opacity: 1;
+  }
+  /*abaixo arrows...  */
+
+.button {
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    width: 45px;
+    height: 45px;
+    opacity: 0.75;
+    border: 1px solid #e7eae8;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    animation: bounce_513 1s infinite;
+  }
+  
+  @keyframes bounce_513 {
+    0%,
+      100% {
+      transform: translateX(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+  
+    50% {
+      transform: translateX(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+
+/* Estilo do cabeçalho */
+
+
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 12%;
+    width: 100%;
+    padding: 5px 0; /* Reduzido para tornar o cabeçalho mais compacto */
+    background: rgba(0, 0, 0, 0.9); /* Fundo semitransparente */
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+}
+
+header img {
+    width: 100px !important; /* Força o tamanho para 150px */
+    height: auto !important; /* Mantém a proporção da imagem */
+}
+
+
+
+/* Ajuste para a navegação */
+header nav ul {
+    display: flex;
+    gap: 20px; /* Menor espaço entre os itens do menu */
+}
+
+header nav ul li {
+    font-size: 16px; /* Tamanho da fonte ajustado */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00FF00; /* Efeito de hover nos links */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 1023px) {
+    header {
+        padding: 8px 0; /* Reduzido o padding do cabeçalho em telas pequenas */
+    }
+
+    header img {
+        width: 120px; /* Logo ainda menor em telas pequenas */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Empilha os itens de navegação em telas pequenas */
+        gap: 10px; /* Menor espaçamento entre os itens */
+    }
+
+    header nav ul li {
+        font-size: 14px; /* Fonte reduzida nos links */
+    }
+}
+
+
+
+
+section {
+    background-image: radial-gradient(#fff, #000);
+    height: 100vh;
+    position: relative;
+}
+
+section .list {
+    width: 70vw;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+section .list .item {
+    position: absolute;
+    inset: 0;
+    /* left: 50%; */
+    transform: translateX(-50%); /* Isso centraliza o item */
+    max-width: 100%; /* Certifique-se de que o item não exceda a tela */
+}
+
+section .list .item .car-img {
+    position: absolute;
+   top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+}
+
+section .list .item .car-img img {
+    width: 80%;
+    transform: rotate(-30deg);
+}
+
+section .list .content {
+    position: absolute;
+    top: 9%;
+    right: 100px;
+    width: 70%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+section .list .content h2 {
+    line-height: 1em;
+    font-family: "League Gothic", sans-serif;
+    color: #00FF00;
+}
+
+section .list .content .description {
+    color: #00FF00;
+    font-size: 12px;
+    text-align: right;
+    max-width: 400px;
+}
+
+/* section .list .content .information {
+    border-radius: 30px;
+    height: 35px;
+    width: 120px;
+    text-transform: uppercase;
+    border: 2px solid #170354;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "League Gothic", sans-serif;
+} */
+
+section .arrows {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    display: flex;
+    justify-content: space-between;
+}
+
+section .arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+section .indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 90vw;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+}
+
+section .number {
+    font-size: 5em;
+    font-family: "League Gothic", sans-serif;
+}
+
+section ul {
+    position: absolute;
+    top: 100%;
+    right: 41%;
+    height: 150px;
+    width: 90vw;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+
+section ul li {
+    width: 50px;
+    height: 5px;
+    background-color: #00FF00;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+section ul li.active {
+    background-color: #000;
+}
+
+section .list::before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 50%;
+    border-top: 1px solid #fff;
+}
+
+section .list .item .car-img::before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+    top: 150%;
+    left: 50px;
+    border-radius: 50%;
+    filter: blur(30px);
+}
+
+section .list {
+    --calculation: 1;
+}
+
+section .list .item {
+    transform: translateX(calc(100vw * var(--calculation)));
+    transition: 0.5s;
+    opacity: 0;
+}
+
+section .list .item .car-img img {
+    transform: rotate(0);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+section .list .content .car-information,
+section .list .content h2,
+section .list .content .description,
+section .list .content .information {
+    transform: translateX(calc(200px * var(--calculation)));
+    transition: 0.7s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+
+section .list .content h2 {
+    transition-delay: 0.5s;
+}
+
+section .list .content .description {
+    transition-delay: 0.7s;
+}
+
+section .list .item.active {
+    transform: translateX(0);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+section .list .item.active .car-img img {
+    transform: rotate(-20deg);
+}
+
+section .list .item.active .content .car-information,
+section .list .item.active .content h2,
+section .list .item.active .description,
+section .list .item.active .information {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header img {
+        width: 10rem;
+    }
+
+    header nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    section .list {
+        width: 95vw;
+    }
+
+    section .list .content {
+        right: 20px;
+        width: 90%;
+    }
+
+    section .list .car-information {
+        font-size: 2rem;
+    }
+
+    section .list .description {
+        font-size: 0.8rem;
+        margin-top: 15rem;
+    }
+
+    section .list .car-img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .list .car-img img {
+        width: auto;
+        height: auto;
+        position: absolute;
+        left: 15%;
+        transform: translate(50%, -50%);
+    }
+
+    section .arrows {
+        width: 95vw;
+    }
+
+    section .arrows button {
+        width: 35px;
+        height: 35px;
+    }
+
+    section .arrows button img {
+        width: 1.5rem;
+    }
+
+    section .indicators {
+        width: 95vw;
+        margin-top: 5rem;
+    }
+
+    section ul {
+        height: auto;
+        right: 20%;
+    }
+
+    section ul li {
+        width: 30px;
+        height: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        grid-template-columns: 1fr 1fr; /* Duas colunas */
+        
+        img {
+            width: 15rem; /* Tamanho ajustado para a imagem */
+        }
+
+        nav ul {
+            grid-template-columns: repeat(2, 1fr); /* Duas colunas para os links */
+        }
+    }
+
+    section {
+        .list {
+            width: 90vw; /* Largura da lista ajustada */
+            
+            .content {
+                right: 15px; /* Ajusta a posição */
+                width: 85%; /* Largura do conteúdo ajustada */
+                
+                h2 {
+                    font-size: 2rem; /* Tamanho da fonte ajustado */
+                }
+                .car-information{
+                    font-size: 4rem; /* Ajusta a descrição */
+                    /* Ajusta a margem superior */
+                }
+                .description {
+                    font-size: 1.3rem; /* Ajusta a descrição */
+                    margin-top: 18rem; /* Ajusta a margem superior */
+                }
+            }
+        }
+        .list .car-img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list .car-img img {
+            width: auto;
+            height: auto;
+            position: relative; /* Ajustado para que o transform não seja necessário */
+            left: 5rem; /* Centraliza horizontalmente */
+            /* Se precisar centralizar verticalmente, use margin: auto; */
+        }
+        
+        .arrows {
+            width: 90vw; /* Ajusta a largura das setas */
+
+            button {
+                width: 40px; /* Largura dos botões ajustada */
+                height: 40px; /* Altura dos botões ajustada */
+
+                img {
+                    width: 1.8rem; /* Largura da imagem das setas ajustada */
+                }
+            }
+        }
+
+        .indicators {
+            width: 90vw; /* Ajusta a largura dos indicadores */
+            margin-top: 4rem; /* Ajusta a margem superior */
+        }
+
+        ul {
+            height: auto; /* Ajusta a altura da lista */
+            right: 15%; /* Ajusta a posição */
+            
+            li {
+                width: 40px; /* Largura dos itens da lista ajustada */
+                height: 8px; /* Altura dos itens da lista ajustada */
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    header {
+        grid-template-columns: 1fr 1fr 1fr; /* Três colunas */
+        
+        img {
+            width: 20rem; /* Tamanho ajustado para a imagem */
+        }
+
+        nav ul {
+            grid-template-columns: repeat(3, 1fr); /* Três colunas para os links */
+        }
+    }
+
+    section {
+        .list {
+            width: 85vw; /* Largura da lista ajustada */
+            
+            .content {
+                right: 10px; /* Ajusta a posição */
+                width: 80%; /* Largura do conteúdo ajustada */
+                
+            .car-information{
+                font-size: 3rem; /* Ajusta a descrição */
+            }
+
+                .description {
+                    font-size: 1.2rem; /* Ajusta a descrição */
+                    margin-top: 5rem; /* Ajusta a margem superior */
+                }
+            }
+        }
+        .list .car-img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list .car-img img {
+            width: auto;
+            height: auto;
+            position: relative; /* Mantido para centralizar */
+            left: 0; /* Centraliza horizontalmente */
+        }
+        
+        .arrows {
+            width: 85vw; /* Ajusta a largura das setas */
+
+            button {
+                width: 45px; /* Largura dos botões ajustada */
+                height: 45px; /* Altura dos botões ajustada */
+
+                img {
+                    width: 2rem; /* Largura da imagem das setas ajustada */
+                }
+            }
+        }
+
+        .indicators {
+            width: 85vw; /* Ajusta a largura dos indicadores */
+            margin-top: 3rem; /* Ajusta a margem superior */
+        }
+
+        ul {
+            height: auto; /* Ajusta a altura da lista */
+            right: 10%; /* Ajusta a posição */
+            
+            li {
+                width: 50px; /* Largura dos itens da lista ajustada */
+                height: 10px; /* Altura dos itens da lista ajustada */
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1919px){
+    header {
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* Quatro colunas */
+        
+        img {
+            width: 25rem; /* Tamanho ajustado para a imagem */
+        }
+
+        nav ul {
+            grid-template-columns: repeat(4, 1fr); /* Quatro colunas para os links */
+        }
+    }
+
+    section {
+        .list {
+            width: 80vw; /* Largura da lista ajustada */
+            
+            .content {
+                right: 5px; /* Ajusta a posição */
+                width: 75%; /* Largura do conteúdo ajustada */
+                
+               .car-information{
+                font-size: 3rem;
+                margin-top: 15rem;
+               }
+
+                .description {
+                    font-size: 1.3rem; /* Ajusta a descrição */
+                    margin-top: 0rem; /* Ajusta a margem superior */
+                }
+            }
+        }
+        .list .car-img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list .car-img img {
+            width: auto;
+            height: auto;
+            position: relative; /* Mantido para centralizar */
+            left: 0; /* Centraliza horizontalmente */
+        }
+        
+        .arrows {
+            width: 80vw; /* Ajusta a largura das setas */
+
+            button {
+                width: 55px; /* Largura dos botões ajustada */
+                height: 55px; /* Altura dos botões ajustada */
+
+                img {
+                    width: 2.5rem; /* Largura da imagem das setas ajustada */
+                }
+            }
+        }
+
+        .indicators {
+            width: 80vw; /* Ajusta a largura dos indicadores */
+            margin-top: 2rem; /* Ajusta a margem superior */
+        }
+
+        ul {
+            height: auto; /* Ajusta a altura da lista */
+            right: 5%; /* Ajusta a posição */
+            
+            li {
+                width: 60px; /* Largura dos itens da lista ajustada */
+                height: 15px; /* Altura dos itens da lista ajustada */
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px) {
+    header {
+        grid-template-columns: repeat(4, 1fr); /* Quatro colunas */
+        
+        img {
+            width: 30rem; /* Tamanho ajustado para a imagem */
+        }
+
+        nav ul {
+            grid-template-columns: repeat(4, 1fr); /* Quatro colunas para os links */
+        }
+    }
+
+    section {
+        .list {
+            width: 75vw; /* Largura da lista ajustada */
+            
+            .content {
+                right: 0.5rem; /* Ajusta a posição */
+                width: 70%; /* Largura do conteúdo ajustada */
+                
+                .car-information {
+                    font-size: 3.3rem; /* Tamanho da fonte aumentado */
+                    margin-top: 10rem; /* Ajusta a margem superior */
+                }
+
+                .description {
+                    font-size: 1.5rem; /* Tamanho da descrição aumentado */
+                    margin-top: 10rem; /* Remove a margem superior */
+                }
+            }
+        }
+
+        .list .car-img {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list .car-img img {
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura disponível */
+            height: auto;
+        }
+        
+        .arrows {
+            width: 85vw; /* Ajusta a largura das setas */
+
+            button {
+                width: 65px; /* Largura dos botões ajustada */
+                height: 65px; /* Altura dos botões ajustada */
+
+                img {
+                    width: 3rem; /* Largura da imagem das setas ajustada */
+                }
+            }
+        }
+
+        .indicators {
+            width: 75vw; /* Ajusta a largura dos indicadores */
+            margin-top: 2rem; /* Ajusta a margem superior */
+        }
+
+        ul {
+            height: auto; /* Corrige a altura para auto */
+            right: 5%; /* Ajusta a posição */
+            
+            li {
+                width: 70px; /* Largura dos itens da lista ajustada */
+                height: 20px; /* Altura dos itens da lista ajustada */
+            }
+        }
+    }
+}
+
+/* Galeria daqui pra baixo tbm*/
+
+/* Centraliza o conteúdo */
+.galeria .galeriadiv .container{
+    margin-top: 3px;
+    text-align: center;
+    padding: 190px;
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo da galeria */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo das imagens */
+.gallery-item {
+    border-radius: 30px 30px 30px;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    overflow: auto;
+    justify-content: center;
+    align-items: flex-start; /* Ajusta para o topo, mas com margem */
+    padding-top: 100px; /* Distância do topo da tela */
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh; /* Para garantir que a imagem não ultrapasse a altura da tela */
+    margin: auto;
+    display: block;
+}
+
+.caption {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 80px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* aqui agr é o formulario*/
+.form-container {
+    margin-top: 3px;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+.btnform{
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btnform :hover{
+    background-color: #4cae4c;
+}
+.formulario{
+    padding-top: 120PX;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  footer {
+    text-shadow: #000 3px 3px 3px;
+    background-color: #242424;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+  }

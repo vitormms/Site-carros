@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Carros</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#container">Carros</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#formulario">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    
+    <!-- https://www.alainclass.com/cars/ -->
+    <section id="container" class="container">
+        <div class="list">
+            <div class="item active itemAnime">
+                <div class="car-img">
+                    <img src="assets/img/storm.png" alt="Jackson Storm">
+                </div>
+                <div class="content">
+                    <p class="car-information">Jackson Storm</p>
+                    <h2>I am the future.</h2>
+                    <p class="description">Jackson Storm é um carro Next-Gen de corrida, projetado com tecnologia de ponta e um design futurista. Ele é mais rápido e eficiente que os modelos tradicionais como McQueen. Seu motor poderoso permite que atinja 420 km/h, superando McQueen em desempenho.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="assets/img/mcqueen.png" alt="Lightning McQueen">
+                </div>
+                <div class="content">
+                    <p class="car-information">Lightning McQueen</p>
+                    <h2>Kachow!</h2>
+                    <p class="description">Relâmpago McQueen é um stock car de corrida vermelho, com o número 95 nas portas. Seu design aerodinâmico e motor potente (provavelmente um V8) permitem que ele atinja 400 km/h nas pistas.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="assets/img/cruz.png" alt="Cruz Ramirez">
+                </div>
+                <div class="content">
+                    <p class="car-information">Cruz Ramirez</p>
+                    <h2>No one is born a champion, you become one.</h2>
+                    <p class="description">Cruz Ramirez é um carro de corrida amarelo, com design aerodinâmico e focado em agilidade. Ela pode alcançar 320 km/h e é especialista em treinar outros pilotos, além de ser estratégica nas pistas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button id="prev" class="button">←</button>
+            <button id="next" class="button">→</button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <section id="galeria" class="galeria">
+        <div class="galeriadiv">
+            <div class="container">
+                <h2>Galeria de Imagens</h2>
+                
+                <div class="gallery">
+                    <img src="assets/img/stormGaleria.jfif" alt="Imagem 1" class="gallery-item" onclick="openModal('assets/img/stormGaleriaOpenModal.png')">
+                    <img src="assets/img/cruzGaleria.png" alt="Imagem 2" class="gallery-item" onclick="openModal('assets/img/cruzGaleriaOpenModal.jpg')">
+                    <img src="assets/img/mcqueenGaleria.png" alt="Imagem 3" class="gallery-item" onclick="openModal('assets/img/mcqueenGaleriaOpenModal.png')">
+                </div>
+            </div>
+        
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
+        
+    </section>
+
+    <section id="formulario" class="formulario">
+
+        <div class="form-container">
+            <h2>Formulário de Contato</h2>
+            <form id="contact-form" action="">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="user_name" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="user_email" required>
+    
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button class="btnform" type="button" id="submit-btn">Enviar</button>
+
+            </form>
+        </div>
+    
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Carros. Todos os direitos reservados para vitor lindo.</p>
+      </footer>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
